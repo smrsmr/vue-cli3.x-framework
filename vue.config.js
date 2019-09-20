@@ -5,7 +5,7 @@ const CompressionWebpackPlugin = require("compression-webpack-plugin");
 let env = process.env.NODE_ENV;
 module.exports = {
   // 基本路径
-  publicPath: env === "production" ? "./" : "",
+  publicPath: env !== "development" ? "/" : "/",
 
   // 静态资源目录 (js, css, img, fonts)
   assetsDir: "assets",
@@ -14,7 +14,7 @@ module.exports = {
   runtimeCompiler: true,
 
   //设置打包之后是否打包.map文件
-  productionSourceMap: env === "production" ? false : true,
+  productionSourceMap: env !== "development" ? false : true,
 
   // 输出文件目录
   outputDir: "dist",

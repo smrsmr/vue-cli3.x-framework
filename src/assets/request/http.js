@@ -4,14 +4,14 @@
  */
 import axios from "axios";
 
-if (process.env.NODE_ENV == "development") {
+/* if (process.env.NODE_ENV == "development") {
   //开发环境下的代理地址，解决本地跨域跨域，配置在vue.config.js中
   //项目域名地址
   axios.defaults.baseURL = "/api/";
 } else if (process.env.NODE_ENV == "production") {
   //生产环境下的地址
   axios.defaults.baseURL = "http://127.0.0.1:8080";
-}
+} */
 
 // 创建axios实例
 let instance = axios.create({
