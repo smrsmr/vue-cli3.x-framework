@@ -12,7 +12,6 @@ module.exports = {
 
 	//关键点在这  原来的 Compiler 换成了 runtimeCompiler
 	runtimeCompiler: true,
-
 	//设置打包之后是否打包.map文件
 	productionSourceMap: env !== "development" ? false : true,
 
